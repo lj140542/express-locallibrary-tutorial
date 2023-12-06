@@ -17,8 +17,8 @@ const app = express();
 // set up mongoose connection
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', false);
-const dev_URI = '';
-const mongoDB = process.env.MONGODB_URI || dev_URI;
+
+const mongoDB = process.env.MONGODB_URI;
 
 main().catch((err) => console.log(err));
 async function main() {
